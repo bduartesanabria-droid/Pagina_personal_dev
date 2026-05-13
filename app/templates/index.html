@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="inicio" class="hero">
+    <div class="container hero-content">
+        <h1 class="hero-title">Construyendo el <br>Futuro Digital</h1>
+        <p class="hero-subtitle">Desarrollador Full-Stack especializado en experiencias web inmersivas, escalables y futuristas.</p>
+        <a href="#cotizar" class="btn-primary">Empieza tu Proyecto</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="servicios" class="section">
+    <div class="container">
+        <h2 class="section-title">Servicios de Elite</h2>
+        <div class="services-grid">
+            <div class="service-card glass">
+                <i class="fas fa-rocket service-icon" style="color: var(--primary-glow);"></i>
+                <h3>Web Apps</h3>
+                <p>Aplicaciones robustas construidas con las últimas tecnologías para máximo rendimiento.</p>
+            </div>
+            <div class="service-card glass">
+                <i class="fas fa-brain service-icon" style="color: var(--secondary-glow);"></i>
+                <h3>AI Integration</h3>
+                <p>Automatización e inteligencia artificial aplicada a tus procesos de negocio.</p>
+            </div>
+            <div class="service-card glass">
+                <i class="fas fa-mobile-alt service-icon" style="color: #4ade80;"></i>
+                <h3>Mobile First</h3>
+                <p>Diseños que se ven increíbles en cualquier pantalla, desde smartphones hasta monitores 4K.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Tool Section -->
+<section id="cotizar" class="section" style="background: rgba(139, 92, 246, 0.02);">
+    <div class="container">
+        <h2 class="section-title">Calcula tu Proyecto</h2>
+        <div class="quote-container glass">
+            <div class="quote-options">
+                <label class="option-item">
+                    <input type="checkbox" class="service-check" data-price="500" value="Frontend Development">
+                    <span>Desarrollo Frontend (UI/UX)</span>
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" class="service-check" data-price="700" value="Backend Logic">
+                    <span>Lógica de Backend & API</span>
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" class="service-check" data-price="300" value="Database Setup">
+                    <span>Configuración de Base de Datos</span>
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" class="service-check" data-price="400" value="AI Integration">
+                    <span>Integración de IA / Chatbots</span>
+                </label>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <label style="display: block; margin-bottom: 1rem; color: var(--text-secondary);">Complejidad del Sistema</label>
+                <input type="range" id="complexity" min="1" max="3" step="0.5" value="1" style="width: 100%; accent-color: var(--primary-glow);">
+                <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.8rem;">
+                    <span>Básico</span>
+                    <span>Avanzado</span>
+                    <span>Enterprise</span>
+                </div>
+            </div>
+
+            <div class="price-display">
+                <p style="color: var(--text-secondary);">Inversión Estimada</p>
+                <div class="total-price">$<span id="total-val">0</span></div>
+                <button class="btn-primary" style="margin-top: 1.5rem;" onclick="submitQuote()">Enviar Cotización</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacto" class="section">
+    <div class="container">
+        <h2 class="section-title">¿Hablamos?</h2>
+        <div class="contact-form glass" style="padding: 3rem;">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="name" class="form-control" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea name="message" class="form-control" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Quote Logic
+    const checks = document.querySelectorAll('.service-check');
+    const complexitySlider = document.getElementById('complexity');
+    const totalDisplay = document.getElementById('total-val');
+
+    function calculate() {
+        let base = 0;
+        checks.forEach(c => {
+            if (c.checked) base += parseInt(c.dataset.price);
+        });
+        const multiplier = parseFloat(complexitySlider.value);
+        const total = Math.round(base * multiplier);
+        totalDisplay.innerText = total.toLocaleString();
+    }
+
+    checks.forEach(c => c.addEventListener('change', calculate));
+    complexitySlider.addEventListener('input', calculate);
+
+    function submitQuote() {
+        const selectedServices = Array.from(checks).filter(c => c.checked).map(c => c.value);
+        const total = totalDisplay.innerText;
+        
+        if (selectedServices.length === 0) {
+            alert('Por favor selecciona al menos un servicio.');
+            return;
+        }
+
+        fetch('/quote', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                services: selectedServices,
+                complexity: complexitySlider.value,
+                total: total
+            })
+        })
+        .then(res => res.json())
+        .then(data => alert(data.message));
+    }
+
+    // Contact Logic
+    document.getElementById('contactForm').onsubmit = function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        
+        fetch('/contact', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert(data.message);
+            this.reset();
+        });
+    };
+</script>
+{% endblock %}
