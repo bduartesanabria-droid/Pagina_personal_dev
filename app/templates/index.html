@@ -3,33 +3,66 @@
 {% block content %}
 <!-- Hero Section -->
 <section id="inicio" class="hero">
-    <div class="container hero-content">
-        <h1 class="hero-title">Soluciones Digitales de<br><span>ALTO IMPACTO</span></h1>
-        <p class="hero-subtitle">Estrategia, diseño y desarrollo tecnológico para empresas que buscan excelencia, escalabilidad y resultados medibles.</p>
-        <a href="#contacto" class="btn-primary">Agenda una Consultoría</a>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="reveal">
+                <h1 class="hero-title">Elevando tu<br><span>VISIÓN DIGITAL</span></h1>
+                <p class="hero-subtitle">Estrategia, diseño y desarrollo web de alto impacto para marcas que buscan destacar en la era tecnológica.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#contacto" class="btn-primary">Empieza tu Proyecto</a>
+                    <a href="#servicios" style="color: white; text-decoration: none; display: flex; align-items: center; font-weight: 600;">Ver Servicios <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-container reveal" style="transition-delay: 0.2s;">
+                <img src="{{ url_for('static', filename='img/shape_1.png') }}" alt="BYDS Tech Shape">
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Why Us Section -->
-<section id="por-que" class="section" style="border-bottom: 1px solid var(--border-color);">
+<section id="por-que" class="section">
     <div class="container">
-        <span class="section-tag">POR QUÉ BYDS.DEV</span>
-        <h2 class="section-title">Compromiso con la Excelencia</h2>
+        <div class="reveal">
+            <span class="section-tag">NUESTRA FILOSOFÍA</span>
+            <h2 class="section-title">Ingeniería Web de Clase Mundial</h2>
+        </div>
         <div class="services-grid">
-            <div class="service-card glass">
-                <i class="fas fa-bullseye service-icon"></i>
-                <h3>Enfoque en Resultados</h3>
-                <p>No solo creamos sitios web; construimos herramientas estratégicas diseñadas para alcanzar objetivos de negocio reales.</p>
+            <div class="service-card glass reveal">
+                <i class="fas fa-brain service-icon"></i>
+                <h3>Estrategia Data-Driven</h3>
+                <p>Analizamos cada detalle para asegurar que tu sitio web no solo sea bonito, sino que cumpla objetivos reales.</p>
             </div>
-            <div class="service-card glass">
-                <i class="fas fa-layer-group service-icon"></i>
-                <h3>Arquitectura Escalable</h3>
-                <p>Nuestras soluciones crecen con tu empresa, utilizando tecnologías de vanguardia que garantizan longevidad y rendimiento.</p>
+            <div class="service-card glass reveal" style="transition-delay: 0.2s;">
+                <i class="fas fa-microchip service-icon"></i>
+                <h3>Tecnología de Punta</h3>
+                <p>Usamos los frameworks más modernos para garantizar velocidad, SEO y escalabilidad absoluta.</p>
             </div>
-            <div class="service-card glass">
-                <i class="fas fa-shield-alt service-icon"></i>
-                <h3>Seguridad & Soporte</h3>
-                <p>Protegemos tu infraestructura digital con los más altos estándares y brindamos soporte continuo de primer nivel.</p>
+            <div class="service-card glass reveal" style="transition-delay: 0.4s;">
+                <i class="fas fa-fingerprint service-icon"></i>
+                <h3>Diseño Exclusivo</h3>
+                <p>Cada proyecto es una pieza única de arte digital, diseñada desde cero para tu marca.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mockup Section -->
+<section class="section" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="reveal">
+                <img src="{{ url_for('static', filename='img/laptop_mockup.png') }}" alt="Premium Mockup" style="width: 100%; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));">
+            </div>
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <span class="section-tag">EL ESTÁNDAR BYDS</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Interfaces que Cautivan</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Nos especializamos en crear experiencias de usuario (UX) que eliminan la fricción y aumentan la conversión. Tu éxito digital es nuestra métrica principal.</p>
+                <ul style="list-style: none; color: var(--text-secondary); display: flex; flex-direction: column; gap: 1rem;">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> Carga ultra-rápida (Core Web Vitals)</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> Optimización total para dispositivos móviles</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> Seguridad de nivel bancario</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -38,109 +71,88 @@
 <!-- Services Section -->
 <section id="servicios" class="section">
     <div class="container">
-        <span class="section-tag">SERVICIOS PROFESIONALES</span>
-        <h2 class="section-title">Especialidades</h2>
+        <div class="reveal">
+            <span class="section-tag">SERVICIOS</span>
+            <h2 class="section-title">Lo que Hacemos</h2>
+        </div>
         <div class="services-grid">
-            <div class="service-card glass">
-                <i class="fas fa-laptop-code service-icon"></i>
-                <h3>Desarrollo Web & Sistemas</h3>
-                <p>Desarrollo de aplicaciones web robustas y sistemas a medida enfocados en la eficiencia operativa.</p>
+            <div class="service-card glass reveal">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Desarrollo Full-Stack</h3>
+                <p>Desde landing pages hasta sistemas complejos de gestión empresarial.</p>
             </div>
-            <div class="service-card glass">
-                <i class="fas fa-store service-icon"></i>
-                <h3>E-commerce Enterprise</h3>
-                <p>Plataformas de venta online escalables con integraciones logísticas y de pago seguras.</p>
+            <div class="service-card glass reveal" style="transition-delay: 0.2s;">
+                <i class="fas fa-shopping-bag service-icon"></i>
+                <h3>E-commerce Pro</h3>
+                <p>Tiendas virtuales optimizadas para ventas con pasarelas de pago globales.</p>
             </div>
-            <div class="service-card glass">
-                <i class="fas fa-pencil-ruler service-icon"></i>
-                <h3>Diseño de Experiencia (UX/UI)</h3>
-                <p>Interfaces intuitivas y estéticas que mejoran la retención y conversión de tus usuarios.</p>
+            <div class="service-card glass reveal" style="transition-delay: 0.4s;">
+                <i class="fas fa-search-dollar service-icon"></i>
+                <h3>SEO & Marketing</h3>
+                <p>Posicionamos tu marca en los primeros resultados de búsqueda.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Process Section -->
-<section id="proceso" class="section" style="background: rgba(255, 255, 255, 0.01);">
+<section id="proceso" class="section">
     <div class="container">
-        <span class="section-tag">METODOLOGÍA</span>
-        <h2 class="section-title">Nuestro Proceso</h2>
-        <div class="process-grid">
-            <div class="process-step">
-                <span class="step-number">01</span>
-                <h4>Descubrimiento & Estrategia</h4>
-                <p style="color: var(--text-secondary);">Analizamos tus necesidades y definimos la hoja de ruta técnica y creativa del proyecto.</p>
-            </div>
-            <div class="process-step">
-                <span class="step-number">02</span>
-                <h4>Diseño & Prototipado</h4>
-                <p style="color: var(--text-secondary);">Creamos interfaces visuales centradas en el usuario antes de escribir una sola línea de código.</p>
-            </div>
-            <div class="process-step">
-                <span class="step-number">03</span>
-                <h4>Desarrollo & QA</h4>
-                <p style="color: var(--text-secondary);">Implementamos la solución con código limpio y realizamos pruebas exhaustivas de calidad.</p>
-            </div>
-            <div class="process-step">
-                <span class="step-number">04</span>
-                <h4>Despliegue & Optimización</h4>
-                <p style="color: var(--text-secondary);">Lanzamos tu proyecto al mercado y monitoreamos su rendimiento para mejoras continuas.</p>
-            </div>
+        <div class="reveal">
+            <span class="section-tag">METODOLOGÍA</span>
+            <h2 class="section-title">El Camino al Éxito</h2>
         </div>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section id="portafolio" class="section">
-    <div class="container">
-        <span class="section-tag">CASOS DE ÉXITO</span>
-        <h2 class="section-title">Portafolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-info">
-                    <h4 style="color: white;">Sistema de Gestión Empresarial</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Plataforma SaaS para optimización de recursos.</p>
-                </div>
+        <div class="process-grid">
+            <div class="process-step reveal">
+                <span class="step-number">01</span>
+                <h4 style="margin-top: 2rem;">Briefing</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Entendemos tu negocio y objetivos.</p>
             </div>
-            <div class="portfolio-item">
-                <div class="portfolio-info">
-                    <h4 style="color: white;">E-commerce de Alta Gama</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Tienda virtual con experiencia de usuario premium.</p>
-                </div>
+            <div class="process-step reveal" style="transition-delay: 0.2s;">
+                <span class="step-number">02</span>
+                <h4 style="margin-top: 2rem;">Diseño</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Creamos el prototipo visual de tu solución.</p>
+            </div>
+            <div class="process-step reveal" style="transition-delay: 0.4s;">
+                <span class="step-number">03</span>
+                <h4 style="margin-top: 2rem;">Build</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Desarrollamos con los estándares más altos.</p>
+            </div>
+            <div class="process-step reveal" style="transition-delay: 0.6s;">
+                <span class="step-number">04</span>
+                <h4 style="margin-top: 2rem;">Launch</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Desplegamos y optimizamos en tiempo real.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contacto" class="section" style="border-top: 1px solid var(--border-color);">
+<section id="contacto" class="section">
     <div class="container">
-        <div class="contact-container">
-            <div>
-                <span class="section-tag">CONTACTO</span>
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">¿Listo para escalar tu negocio?</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 3rem;">Completa el formulario y un consultor especializado se pondrá en contacto contigo en menos de 24 horas.</p>
-                
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <a href="mailto:proyectos@byds.dev" style="color: var(--text-primary); text-decoration: none;"><i class="fas fa-envelope" style="color: var(--accent-primary); margin-right: 1rem;"></i> proyectos@byds.dev</a>
-                    <a href="tel:+573114771700" style="color: var(--text-primary); text-decoration: none;"><i class="fas fa-phone" style="color: var(--accent-primary); margin-right: 1rem;"></i> +57 311 477 1700</a>
+        <div class="glass reveal" style="padding: 5rem; text-align: center;">
+            <span class="section-tag">¿Hablamos?</span>
+            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Transformemos tu idea hoy</h2>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">Envíanos un mensaje y descubre cómo BYDS.DEV puede llevar tu presencia digital al siguiente nivel.</p>
+            
+            <form id="contactForm" style="max-width: 600px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" class="form-control" placeholder="Tu Email" required>
                 </div>
-            </div>
-
-            <div class="contact-form glass" style="padding: 3rem;">
-                <form id="contactForm">
-                    <input type="text" name="name" placeholder="Nombre completo" required>
-                    <input type="email" name="email" placeholder="Email corporativo" required>
-                    <textarea name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto o necesidad..." required></textarea>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Enviar Solicitud</button>
-                </form>
+                <textarea name="message" class="form-control" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensaje a BYDS</button>
+            </form>
+            
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 3rem;">
+                <a href="mailto:byds.dev@gmail.com" style="color: white; text-decoration: none;"><i class="fas fa-envelope" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> byds.dev@gmail.com</a>
+                <a href="tel:+573114771700" style="color: white; text-decoration: none;"><i class="fas fa-phone" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> +57 311 477 1700</a>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-    // Contact Logic
     document.getElementById('contactForm').onsubmit = function(e) {
         e.preventDefault();
         const formData = new FormData(this);
