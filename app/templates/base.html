@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYDS.DEV | Soluciones Digitales de Élite</title>
-    <meta name="description" content="Estrategia, diseño y desarrollo web de alto impacto. Transformamos ideas en experiencias digitales premium.">
+    <title>BYDS.DEV | Elevamos tu Presencia Digital</title>
+    <meta name="description" content="Diseño y desarrollo web de alto impacto. Transformamos tu negocio en una potencia digital con estrategias ganadoras.">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Ambient Background -->
-    <div class="ambient-bg">
-        <div class="blob"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <div class="main-bg"></div>
 
     <nav id="navbar">
         <div class="container nav-content">
-            <a href="#" class="nav-logo">BYDS<span>.DEV</span></a>
+            <a href="#" class="logo">BYDS<span>.DEV</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proceso">Proceso</a></li>
-                <li><a href="#portafolio">Proyectos</a></li>
+                <li><a href="#servicios">Beneficios</a></li>
+                <li><a href="#proceso">Pasos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -32,46 +27,38 @@
         {% block content %}{% endblock %}
     </main>
 
-    <a href="https://wa.me/573114771700" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/573114771700" class="wa-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer>
+    <footer style="padding: 100px 0; border-top: 1px solid var(--glass-border); text-align: center;">
         <div class="container">
-            <a href="#" class="nav-logo" style="margin-bottom: 2rem; display: inline-block;">BYDS<span>.DEV</span></a>
-            <div style="display: flex; justify-content: center; gap: 2.5rem; margin-bottom: 2rem;">
-                <a href="https://github.com/bduartesanabria-droid" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/byds.dev" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:byds.dev@gmail.com" style="color: var(--text-secondary);"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="logo" style="margin-bottom: 2rem; display: inline-block;">BYDS<span>.DEV</span></a>
+            <p style="color: var(--text-dim); margin-bottom: 3rem; max-width: 500px; margin: 0 auto 3rem;">Diseñamos el futuro de tu empresa, hoy mismo. Calidad sin compromisos.</p>
+            <div style="display: flex; justify-content: center; gap: 3rem;">
+                <a href="https://github.com/bduartesanabria-droid" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/byds.dev" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:byds.dev@gmail.com" style="color: white; font-size: 1.5rem;"><i class="fas fa-envelope"></i></a>
             </div>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); opacity: 0.5;">&copy; 2026 BYDS.DEV. Excellence in Digital Craftsmanship.</p>
+            <p style="margin-top: 4rem; color: var(--text-dim); font-size: 0.8rem;">&copy; 2026 BYDS.DEV. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll effect
         window.onscroll = function() {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) nav.classList.add('scrolled');
             else nav.classList.remove('scrolled');
         };
 
-        // Scroll Reveal Animation
-        const observerOptions = {
-            threshold: 0.1
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
         document.addEventListener('DOMContentLoaded', () => {
-            const revealElements = document.querySelectorAll('.reveal');
-            revealElements.forEach(el => observer.observe(el));
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
     </script>
 </body>
