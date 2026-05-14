@@ -226,13 +226,78 @@
         }, 500);
     }, 4000);
 
-    // Form logic
-    document.getElementById('contactForm').onsubmit = function(e) {
+    // Form logic with premium notification
+    const form = document.getElementById('contactForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    function showToast(message, isSuccess) {
+        // Remove existing toast
+        const existing = document.getElementById('toast-notification');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.id = 'toast-notification';
+        toast.innerHTML = `
+            <span style="font-size:1.5rem;">${isSuccess ? '✅' : '❌'}</span>
+            <span>${message}</span>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-120px);
+            background: ${isSuccess ? 'rgba(0, 210, 100, 0.15)' : 'rgba(255, 60, 60, 0.15)'};
+            border: 1px solid ${isSuccess ? 'rgba(0, 210, 100, 0.5)' : 'rgba(255, 60, 60, 0.5)'};
+            backdrop-filter: blur(20px);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        `;
+        document.body.appendChild(toast);
+
+        // Animate in
+        requestAnimationFrame(() => {
+            toast.style.transform = 'translateX(-50%) translateY(0)';
+        });
+
+        // Auto dismiss after 5s
+        setTimeout(() => {
+            toast.style.transform = 'translateX(-50%) translateY(-120px)';
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+    }
+
+    form.onsubmit = function(e) {
         e.preventDefault();
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="margin-right:0.5rem;"></i> ENVIANDO...';
+
         const formData = new FormData(this);
         fetch('/contact', { method: 'POST', body: formData })
         .then(res => res.json())
-        .then(data => { alert(data.message); this.reset(); });
+        .then(data => {
+            const isSuccess = data.status === 'success';
+            showToast(data.message, isSuccess);
+            if (isSuccess) this.reset();  // Solo vaciamos si fue exitoso
+        })
+        .catch(() => {
+            showToast('Error de conexión. Escríbenos a byds.dev@gmail.com', false);
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'ENVIAR PROPUESTA';
+        });
     };
 </script>
 

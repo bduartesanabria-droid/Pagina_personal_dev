@@ -1,5 +1,8 @@
 from flask import Flask
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Carga el archivo .env
 
 def create_app():
     app = Flask(__name__)
