@@ -278,6 +278,72 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+/* Mobile Navigation Toggle */
+.menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+@media (max-width: 992px) {
+    .menu-btn { display: block; }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1500;
+    }
+    
+    .nav-links.active { right: 0; }
+    
+    .nav-links a { font-size: 1.5rem; }
+
+    /* Font Scaling */
+    .hero h1 {
+        font-size: 3.2rem;
+        letter-spacing: -1px;
+    }
+    
+    .hero p { font-size: 1.1rem; }
+    
+    .section-title { font-size: 2.2rem; }
+    
+    .section { padding: 6rem 0; }
+    
+    /* Layout Adjustments */
+    .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .glass-card { padding: 2rem; }
+    
+    .contact-grid { gap: 3rem; }
+    
+    .tech-stack { gap: 2rem; }
+    .tech-item i { font-size: 2.5rem; }
+    
+    .container { padding: 0 1.5rem; }
+    
+    .btn-futuristic {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -302,8 +368,3 @@ footer {
 }
 
 .floating { animation: float 6s ease-in-out infinite; }
-
-@media (max-width: 992px) {
-    .hero h1 { font-size: 4rem; }
-    .contact-grid { grid-template-columns: 1fr; }
-}
