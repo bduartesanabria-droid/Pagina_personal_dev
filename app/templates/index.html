@@ -3,125 +3,88 @@
 {% block content %}
 <!-- Hero Section -->
 <section id="inicio" class="hero">
+    <div class="container hero-content reveal">
+        <h1 class="gradient-text">DISEÑO WEB<br>QUE SÍ VENDE</h1>
+        <p>Transformamos tu marca en una potencia digital con sitios web de alto impacto, rápidos y optimizados para convertir visitantes en clientes reales.</p>
+        <a href="#contacto" class="btn-main">Impulsa tu Negocio Hoy</a>
+    </div>
+</section>
+
+<!-- Process Section (From Image 1) -->
+<section id="proceso" class="section" style="background: rgba(255,255,255,0.01);">
     <div class="container">
-        <div class="hero-grid">
-            <div class="reveal">
-                <h1 class="hero-title">Elevando tu<br><span>VISIÓN DIGITAL</span></h1>
-                <p class="hero-subtitle">Estrategia, diseño y desarrollo web de alto impacto para marcas que buscan destacar en la era tecnológica.</p>
-                <div style="display: flex; gap: 1.5rem;">
-                    <a href="#contacto" class="btn-primary">Empieza tu Proyecto</a>
-                    <a href="#servicios" style="color: white; text-decoration: none; display: flex; align-items: center; font-weight: 600;">Ver Servicios <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
-                </div>
+        <div style="text-align: center; margin-bottom: 5rem;" class="reveal">
+            <span class="step-dot" style="width: auto; height: auto; padding: 1rem 2rem; border-radius: 50px; font-size: 1rem; margin-bottom: 2rem;">Plan de trabajo</span>
+            <h2 style="font-size: 3.5rem;">Tu página web en 4 pasos:</h2>
+        </div>
+        
+        <div class="step-container">
+            <div class="step-item reveal">
+                <div class="step-dot">1</div>
+                <h3>Análisis y Estrategia</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Definimos los objetivos de conversión de tu negocio y trazamos la ruta al éxito.</p>
             </div>
-            <div class="hero-image-container reveal" style="transition-delay: 0.2s;">
-                <img src="{{ url_for('static', filename='img/shape_1.png') }}" alt="BYDS Tech Shape">
+            <div class="step-item reveal" style="transition-delay: 0.2s;">
+                <div class="step-dot">2</div>
+                <h3>Diseño Visual (UX/UI)</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Creamos interfaces modernas y profesionales diseñadas para guiar al usuario.</p>
+            </div>
+            <div class="step-item reveal" style="transition-delay: 0.4s;">
+                <div class="step-dot">3</div>
+                <h3>Desarrollo WEB</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Implementamos código sólido, optimizado para móviles y tiempos de carga récord.</p>
+            </div>
+            <div class="step-item reveal" style="transition-delay: 0.6s;">
+                <div class="step-dot">4</div>
+                <h3>Entrega y Capacitación</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Ponemos tu web al aire y te enseñamos a administrar tu nueva herramienta.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Why Us Section -->
-<section id="por-que" class="section">
-    <div class="container">
-        <div class="reveal">
-            <span class="section-tag">NUESTRA FILOSOFÍA</span>
-            <h2 class="section-title">Ingeniería Web de Clase Mundial</h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card glass reveal">
-                <i class="fas fa-brain service-icon"></i>
-                <h3>Estrategia Data-Driven</h3>
-                <p>Analizamos cada detalle para asegurar que tu sitio web no solo sea bonito, sino que cumpla objetivos reales.</p>
-            </div>
-            <div class="service-card glass reveal" style="transition-delay: 0.2s;">
-                <i class="fas fa-microchip service-icon"></i>
-                <h3>Tecnología de Punta</h3>
-                <p>Usamos los frameworks más modernos para garantizar velocidad, SEO y escalabilidad absoluta.</p>
-            </div>
-            <div class="service-card glass reveal" style="transition-delay: 0.4s;">
-                <i class="fas fa-fingerprint service-icon"></i>
-                <h3>Diseño Exclusivo</h3>
-                <p>Cada proyecto es una pieza única de arte digital, diseñada desde cero para tu marca.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Mockup Section -->
-<section class="section" style="background: rgba(255,255,255,0.01);">
-    <div class="container">
-        <div class="hero-grid">
-            <div class="reveal">
-                <img src="{{ url_for('static', filename='img/laptop_mockup.png') }}" alt="Premium Mockup" style="width: 100%; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));">
-            </div>
-            <div class="reveal" style="transition-delay: 0.2s;">
-                <span class="section-tag">EL ESTÁNDAR BYDS</span>
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Interfaces que Cautivan</h2>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Nos especializamos en crear experiencias de usuario (UX) que eliminan la fricción y aumentan la conversión. Tu éxito digital es nuestra métrica principal.</p>
-                <ul style="list-style: none; color: var(--text-secondary); display: flex; flex-direction: column; gap: 1rem;">
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> Carga ultra-rápida (Core Web Vitals)</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> Optimización total para dispositivos móviles</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> Seguridad de nivel bancario</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
+<!-- Benefits Section (From Image 3) -->
 <section id="servicios" class="section">
     <div class="container">
-        <div class="reveal">
-            <span class="section-tag">SERVICIOS</span>
-            <h2 class="section-title">Lo que Hacemos</h2>
+        <div style="text-align: center; margin-bottom: 5rem;" class="reveal">
+            <h2 style="font-size: 3.5rem;">El diseño de tu página web tendrá estos beneficios</h2>
         </div>
-        <div class="services-grid">
-            <div class="service-card glass reveal">
-                <i class="fas fa-code service-icon"></i>
-                <h3>Desarrollo Full-Stack</h3>
-                <p>Desde landing pages hasta sistemas complejos de gestión empresarial.</p>
+        
+        <div class="benefit-grid">
+            <div class="benefit-card reveal">
+                <i class="fas fa-sitemap"></i>
+                <h3>Arquitectura Web</h3>
+                <p style="color: var(--text-dim);">Tendrá su respectiva Home, galería, zona de contacto, blog de noticias y demás.</p>
             </div>
-            <div class="service-card glass reveal" style="transition-delay: 0.2s;">
-                <i class="fas fa-shopping-bag service-icon"></i>
-                <h3>E-commerce Pro</h3>
-                <p>Tiendas virtuales optimizadas para ventas con pasarelas de pago globales.</p>
+            <div class="benefit-card reveal" style="transition-delay: 0.1s;">
+                <i class="fas fa-users"></i>
+                <h3>Módulo Red Social</h3>
+                <p style="color: var(--text-dim);">Tus perfiles sociales integrados para aumentar el engagement de tu marca.</p>
             </div>
-            <div class="service-card glass reveal" style="transition-delay: 0.4s;">
-                <i class="fas fa-search-dollar service-icon"></i>
-                <h3>SEO & Marketing</h3>
-                <p>Posicionamos tu marca en los primeros resultados de búsqueda.</p>
+            <div class="benefit-card reveal" style="transition-delay: 0.2s;">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Analítica Web</h3>
+                <p style="color: var(--text-dim);">Sabrás cuántas personas te visitan y qué impacto tiene tu sitio en tiempo real.</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Process Section -->
-<section id="proceso" class="section">
-    <div class="container">
-        <div class="reveal">
-            <span class="section-tag">METODOLOGÍA</span>
-            <h2 class="section-title">El Camino al Éxito</h2>
-        </div>
-        <div class="process-grid">
-            <div class="process-step reveal">
-                <span class="step-number">01</span>
-                <h4 style="margin-top: 2rem;">Briefing</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Entendemos tu negocio y objetivos.</p>
+            <div class="benefit-card reveal" style="transition-delay: 0.3s;">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+                <p style="color: var(--text-dim);">Tu web lista para posicionarse en los primeros lugares de Google, Bing y Yahoo.</p>
             </div>
-            <div class="process-step reveal" style="transition-delay: 0.2s;">
-                <span class="step-number">02</span>
-                <h4 style="margin-top: 2rem;">Diseño</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Creamos el prototipo visual de tu solución.</p>
+            <div class="benefit-card reveal" style="transition-delay: 0.4s;">
+                <i class="fas fa-file-alt"></i>
+                <h3>Asesoría en Redacción</h3>
+                <p style="color: var(--text-dim);">Te asesoramos sobre cómo elaborar textos que vendan y capten la atención.</p>
             </div>
-            <div class="process-step reveal" style="transition-delay: 0.4s;">
-                <span class="step-number">03</span>
-                <h4 style="margin-top: 2rem;">Build</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Desarrollamos con los estándares más altos.</p>
+            <div class="benefit-card reveal" style="transition-delay: 0.5s;">
+                <i class="fas fa-tools"></i>
+                <h3>Soporte 24/7</h3>
+                <p style="color: var(--text-dim);">Nos encargamos de que tu web esté siempre disponible, sin errores y actualizada.</p>
             </div>
-            <div class="process-step reveal" style="transition-delay: 0.6s;">
-                <span class="step-number">04</span>
-                <h4 style="margin-top: 2rem;">Launch</h4>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Desplegamos y optimizamos en tiempo real.</p>
+            <div class="benefit-card reveal" style="transition-delay: 0.6s;">
+                <i class="fas fa-lock"></i>
+                <h3>Seguridad Certificada</h3>
+                <p style="color: var(--text-dim);">Certificado SSL incluido para que tu información y la de tus clientes esté segura.</p>
             </div>
         </div>
     </div>
@@ -130,23 +93,22 @@
 <!-- Contact Section -->
 <section id="contacto" class="section">
     <div class="container">
-        <div class="glass reveal" style="padding: 5rem; text-align: center;">
-            <span class="section-tag">¿Hablamos?</span>
-            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Transformemos tu idea hoy</h2>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">Envíanos un mensaje y descubre cómo BYDS.DEV puede llevar tu presencia digital al siguiente nivel.</p>
+        <div class="benefit-card reveal" style="padding: 5rem; text-align: center; background: linear-gradient(135deg, rgba(112, 0, 255, 0.1), rgba(0, 242, 255, 0.05));">
+            <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">¿Listo para el siguiente nivel?</h2>
+            <p style="color: var(--text-dim); max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">No pierdas más clientes por un sitio web anticuado. Hagamos algo grande juntos.</p>
             
-            <form id="contactForm" style="max-width: 600px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                    <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required>
-                    <input type="email" name="email" class="form-control" placeholder="Tu Email" required>
+            <form id="contactForm" style="max-width: 700px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <input type="text" name="name" class="step-dot" style="width: 100%; border-radius: 12px; font-size: 1rem; padding: 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); box-shadow: none;" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" class="step-dot" style="width: 100%; border-radius: 12px; font-size: 1rem; padding: 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); box-shadow: none;" placeholder="Tu Email" required>
                 </div>
-                <textarea name="message" class="form-control" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
-                <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensaje a BYDS</button>
+                <textarea name="message" class="step-dot" style="width: 100%; border-radius: 12px; font-size: 1rem; padding: 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); box-shadow: none; min-height: 150px;" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                <button type="submit" class="btn-main" style="width: 100%; margin-top: 2rem;">Enviar Mensaje a BYDS.DEV</button>
             </form>
             
-            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 3rem;">
-                <a href="mailto:byds.dev@gmail.com" style="color: white; text-decoration: none;"><i class="fas fa-envelope" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> byds.dev@gmail.com</a>
-                <a href="tel:+573114771700" style="color: white; text-decoration: none;"><i class="fas fa-phone" style="color: var(--accent-primary); margin-right: 0.5rem;"></i> +57 311 477 1700</a>
+            <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
+                <a href="mailto:byds.dev@gmail.com" style="color: white; text-decoration: none; font-weight: 700;"><i class="fas fa-envelope" style="color: var(--primary); margin-right: 1rem;"></i> byds.dev@gmail.com</a>
+                <a href="tel:+573114771700" style="color: white; text-decoration: none; font-weight: 700;"><i class="fas fa-phone" style="color: var(--primary); margin-right: 1rem;"></i> +57 311 477 1700</a>
             </div>
         </div>
     </div>
@@ -156,16 +118,9 @@
     document.getElementById('contactForm').onsubmit = function(e) {
         e.preventDefault();
         const formData = new FormData(this);
-        
-        fetch('/contact', {
-            method: 'POST',
-            body: formData
-        })
+        fetch('/contact', { method: 'POST', body: formData })
         .then(res => res.json())
-        .then(data => {
-            alert(data.message);
-            this.reset();
-        });
+        .then(data => { alert(data.message); this.reset(); });
     };
 </script>
 {% endblock %}
