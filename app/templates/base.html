@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYDS.DEV | Soluciones Digitales Corporativas</title>
-    <meta name="description" content="Estrategia, diseño y desarrollo web de alto impacto para empresas que buscan escalar su presencia digital con seriedad y profesionalismo.">
+    <title>BYDS.DEV | Soluciones Digitales de Élite</title>
+    <meta name="description" content="Estrategia, diseño y desarrollo web de alto impacto. Transformamos ideas en experiencias digitales premium.">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="nav-logo">BYDS<span>.DEV</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
-                <li><a href="#proceso">Nuestro Proceso</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#portafolio">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -26,27 +32,47 @@
         {% block content %}{% endblock %}
     </main>
 
+    <a href="https://wa.me/573114771700" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <footer>
         <div class="container">
             <a href="#" class="nav-logo" style="margin-bottom: 2rem; display: inline-block;">BYDS<span>.DEV</span></a>
             <div style="display: flex; justify-content: center; gap: 2.5rem; margin-bottom: 2rem;">
-                <a href="https://github.com/bduartesanabria-droid" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.instagram.com/byds.dev" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://wa.me/573114771700" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://github.com/bduartesanabria-droid" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/byds.dev" target="_blank" style="color: var(--text-secondary);"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:byds.dev@gmail.com" style="color: var(--text-secondary);"><i class="fas fa-envelope"></i></a>
             </div>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); opacity: 0.6;">&copy; 2026 BYDS.DEV. Soluciones Digitales de Alto Impacto.</p>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); opacity: 0.5;">&copy; 2026 BYDS.DEV. Excellence in Digital Craftsmanship.</p>
         </div>
     </footer>
 
     <script>
+        // Navbar scroll effect
         window.onscroll = function() {
             const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
         };
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 </html>
