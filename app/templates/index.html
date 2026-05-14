@@ -3,89 +3,153 @@
 {% block content %}
 <!-- Hero Section -->
 <section id="inicio" class="hero">
-    <div class="container hero-content reveal">
-        <h1 class="gradient-text">DISEÑO WEB<br>QUE SÍ VENDE</h1>
-        <p>Transformamos tu marca en una potencia digital con sitios web de alto impacto, rápidos y optimizados para convertir visitantes en clientes reales.</p>
-        <a href="#contacto" class="btn-main">Impulsa tu Negocio Hoy</a>
+    <div class="container hero-content">
+        <h1 id="heroTitle" class="neon-text-blue">TU NEGOCIO NECESITA PRESENCIA DIGITAL</h1>
+        <p class="reveal">Diseñamos soluciones web modernas, innovadoras y funcionales que ayudan a empresas, emprendimientos y negocios a crecer en el mundo digital.</p>
+        <div class="reveal" style="display: flex; justify-content: center; gap: 2rem;">
+            <a href="#portafolio" class="btn-futuristic primary">Ver Proyectos</a>
+            <a href="#contacto" class="btn-futuristic">Trabajar con BYDS</a>
+        </div>
     </div>
 </section>
 
-<!-- Process Section (From Image 1) -->
-<section id="proceso" class="section" style="background: rgba(255,255,255,0.01);">
+<!-- About Section -->
+<section id="quienes-somos" class="section">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 5rem;" class="reveal">
-            <span class="step-dot" style="width: auto; height: auto; padding: 1rem 2rem; border-radius: 50px; font-size: 1rem; margin-bottom: 2rem;">Plan de trabajo</span>
-            <h2 style="font-size: 3.5rem;">Tu página web en 4 pasos:</h2>
-        </div>
-        
-        <div class="step-container">
-            <div class="step-item reveal">
-                <div class="step-dot">1</div>
-                <h3>Análisis y Estrategia</h3>
-                <p style="color: var(--text-dim); margin-top: 1rem;">Definimos los objetivos de conversión de tu negocio y trazamos la ruta al éxito.</p>
+        <h2 class="section-title reveal">QUIÉNES SOMOS</h2>
+        <div class="grid-3">
+            <div class="glass-card reveal">
+                <p style="font-size: 1.2rem;">BYDS.DEV es una marca enfocada en crear experiencias digitales modernas para empresas, emprendimientos y negocios que buscan innovar y destacar. Combinamos diseño futurista, desarrollo web y tecnología para transformar ideas en soluciones digitales profesionales.</p>
             </div>
-            <div class="step-item reveal" style="transition-delay: 0.2s;">
-                <div class="step-dot">2</div>
-                <h3>Diseño Visual (UX/UI)</h3>
-                <p style="color: var(--text-dim); margin-top: 1rem;">Creamos interfaces modernas y profesionales diseñadas para guiar al usuario.</p>
+            <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                <div style="font-size: 3rem; font-weight: 900; color: var(--neon-orange);">99%</div>
+                <p>Satisfacción del Cliente</p>
+                <div style="font-size: 3rem; font-weight: 900; color: var(--neon-blue); margin-top: 2rem;">50+</div>
+                <p>Proyectos Entregados</p>
             </div>
-            <div class="step-item reveal" style="transition-delay: 0.4s;">
-                <div class="step-dot">3</div>
-                <h3>Desarrollo WEB</h3>
-                <p style="color: var(--text-dim); margin-top: 1rem;">Implementamos código sólido, optimizado para móviles y tiempos de carga récord.</p>
-            </div>
-            <div class="step-item reveal" style="transition-delay: 0.6s;">
-                <div class="step-dot">4</div>
-                <h3>Entrega y Capacitación</h3>
-                <p style="color: var(--text-dim); margin-top: 1rem;">Ponemos tu web al aire y te enseñamos a administrar tu nueva herramienta.</p>
+            <div class="glass-card reveal" style="transition-delay: 0.4s; text-align: center;">
+                <i class="fas fa-rocket service-icon neon-text-orange" style="font-size: 5rem;"></i>
+                <h4 style="margin-top: 1rem;">IMPULSANDO EL FUTURO</h4>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Benefits Section (From Image 3) -->
-<section id="servicios" class="section">
+<!-- Services Section -->
+<section id="servicios" class="section" style="background: rgba(255,255,255,0.01);">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 5rem;" class="reveal">
-            <h2 style="font-size: 3.5rem;">El diseño de tu página web tendrá estos beneficios</h2>
+        <h2 class="section-title reveal">NUESTROS SERVICIOS</h2>
+        <div class="grid-4">
+            <!-- 1 -->
+            <div class="glass-card reveal">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Páginas Web</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Sitios modernos, rápidos y optimizados para impulsar tu negocio.</p>
+            </div>
+            <!-- 2 -->
+            <div class="glass-card reveal" style="transition-delay: 0.1s;">
+                <i class="fas fa-bullseye service-icon"></i>
+                <h3>Landing Pages</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Diseños modernos enfocados en generar confianza y conversiones.</p>
+            </div>
+            <!-- 3 -->
+            <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                <i class="fas fa-shopping-cart service-icon"></i>
+                <h3>Tiendas Online</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Vende tus productos a todo el mundo con plataformas seguras y elegantes.</p>
+            </div>
+            <!-- 4 -->
+            <div class="glass-card reveal" style="transition-delay: 0.3s;">
+                <i class="fas fa-cogs service-icon"></i>
+                <h3>Sistemas Web</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Automatiza procesos y mejora la productividad de tu empresa.</p>
+            </div>
+            <!-- 5 -->
+            <div class="glass-card reveal" style="transition-delay: 0.4s;">
+                <i class="fas fa-pencil-ruler service-icon"></i>
+                <h3>Diseño UI/UX</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Experiencias de usuario intuitivas y visualmente impactantes.</p>
+            </div>
+            <!-- 6 -->
+            <div class="glass-card reveal" style="transition-delay: 0.5s;">
+                <i class="fas fa-robot service-icon"></i>
+                <h3>Automatización</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Soluciones inteligentes para tareas repetitivas en tu negocio.</p>
+            </div>
+            <!-- 7 -->
+            <div class="glass-card reveal" style="transition-delay: 0.6s;">
+                <i class="fas fa-tools service-icon"></i>
+                <h3>Mantenimiento</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Tu plataforma siempre actualizada, segura y libre de errores.</p>
+            </div>
+            <!-- 8 -->
+            <div class="glass-card reveal" style="transition-delay: 0.7s;">
+                <i class="fas fa-cloud-upload-alt service-icon"></i>
+                <h3>Hosting</h3>
+                <p style="color: var(--text-dim); margin-top: 1rem;">Despliegue profesional en la nube con máxima disponibilidad.</p>
+            </div>
         </div>
-        
-        <div class="benefit-grid">
-            <div class="benefit-card reveal">
-                <i class="fas fa-sitemap"></i>
-                <h3>Arquitectura Web</h3>
-                <p style="color: var(--text-dim);">Tendrá su respectiva Home, galería, zona de contacto, blog de noticias y demás.</p>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portafolio" class="section">
+    <div class="container">
+        <h2 class="section-title reveal">PROYECTOS DESTACADOS</h2>
+        <div class="grid-3">
+            <div class="glass-card reveal" style="padding: 1rem; overflow: hidden;">
+                <div style="height: 250px; background: var(--dark-blue); border-radius: 8px; margin-bottom: 2rem;">
+                    <!-- Placeholder for dashboard visual -->
+                    <div style="padding: 2rem;">
+                        <div style="width: 40%; height: 10px; background: var(--neon-blue); opacity: 0.3; margin-bottom: 1rem;"></div>
+                        <div style="width: 80%; height: 10px; background: var(--neon-blue); opacity: 0.2; margin-bottom: 1rem;"></div>
+                        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                            <div style="flex: 1; height: 100px; background: var(--neon-blue); opacity: 0.1;"></div>
+                            <div style="flex: 1; height: 100px; background: var(--neon-orange); opacity: 0.1;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 1.5rem;">
+                    <h3>SISTEMA CORPORATIVO V3</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 1rem;">Dashboard inteligente para gestión de recursos empresariales.</p>
+                    <a href="#" class="neon-text-blue" style="text-decoration: none; display: block; margin-top: 1.5rem; font-weight: 800;">LIVE PREVIEW</a>
+                </div>
             </div>
-            <div class="benefit-card reveal" style="transition-delay: 0.1s;">
-                <i class="fas fa-users"></i>
-                <h3>Módulo Red Social</h3>
-                <p style="color: var(--text-dim);">Tus perfiles sociales integrados para aumentar el engagement de tu marca.</p>
+            <!-- More projects can be added here -->
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonios" class="section" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+        <h2 class="section-title reveal">LO QUE DICEN NUESTROS CLIENTES</h2>
+        <div class="grid-3">
+            <div class="glass-card reveal" style="text-align: center;">
+                <p style="font-style: italic; margin-bottom: 2rem;">"BYDS transformó completamente la imagen digital de nuestro negocio. Ahora transmitimos confianza y calidad."</p>
+                <div class="neon-text-orange" style="font-weight: 900;">MARKETING LEAD</div>
             </div>
-            <div class="benefit-card reveal" style="transition-delay: 0.2s;">
-                <i class="fas fa-chart-bar"></i>
-                <h3>Analítica Web</h3>
-                <p style="color: var(--text-dim);">Sabrás cuántas personas te visitan y qué impacto tiene tu sitio en tiempo real.</p>
+            <div class="glass-card reveal" style="transition-delay: 0.2s; text-align: center;">
+                <p style="font-style: italic; margin-bottom: 2rem;">"Una experiencia moderna, profesional e innovadora. El proceso fue impecable desde el primer día."</p>
+                <div class="neon-text-blue" style="font-weight: 900;">STARTUP FOUNDER</div>
             </div>
-            <div class="benefit-card reveal" style="transition-delay: 0.3s;">
-                <i class="fas fa-search"></i>
-                <h3>SEO</h3>
-                <p style="color: var(--text-dim);">Tu web lista para posicionarse en los primeros lugares de Google, Bing y Yahoo.</p>
-            </div>
-            <div class="benefit-card reveal" style="transition-delay: 0.4s;">
-                <i class="fas fa-file-alt"></i>
-                <h3>Asesoría en Redacción</h3>
-                <p style="color: var(--text-dim);">Te asesoramos sobre cómo elaborar textos que vendan y capten la atención.</p>
-            </div>
-            <div class="benefit-card reveal" style="transition-delay: 0.5s;">
-                <i class="fas fa-tools"></i>
-                <h3>Soporte 24/7</h3>
-                <p style="color: var(--text-dim);">Nos encargamos de que tu web esté siempre disponible, sin errores y actualizada.</p>
-            </div>
-            <div class="benefit-card reveal" style="transition-delay: 0.6s;">
-                <i class="fas fa-lock"></i>
-                <h3>Seguridad Certificada</h3>
-                <p style="color: var(--text-dim);">Certificado SSL incluido para que tu información y la de tus clientes esté segura.</p>
-            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Section -->
+<section id="tecnologias" class="section">
+    <div class="container">
+        <h2 class="section-title reveal">TECNOLOGÍAS</h2>
+        <div class="tech-stack reveal">
+            <div class="tech-item"><i class="fab fa-python"></i><p>Python</p></div>
+            <div class="tech-item"><i class="fas fa-server"></i><p>Flask</p></div>
+            <div class="tech-item"><i class="fas fa-database"></i><p>PostgreSQL</p></div>
+            <div class="tech-item"><i class="fab fa-docker"></i><p>Docker</p></div>
+            <div class="tech-item"><i class="fab fa-html5"></i><p>HTML</p></div>
+            <div class="tech-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+            <div class="tech-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
+            <div class="tech-item"><i class="fab fa-github"></i><p>GitHub</p></div>
         </div>
     </div>
 </section>
@@ -93,28 +157,69 @@
 <!-- Contact Section -->
 <section id="contacto" class="section">
     <div class="container">
-        <div class="benefit-card reveal" style="padding: 5rem; text-align: center; background: linear-gradient(135deg, rgba(112, 0, 255, 0.1), rgba(0, 242, 255, 0.05));">
-            <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">¿Listo para el siguiente nivel?</h2>
-            <p style="color: var(--text-dim); max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">No pierdas más clientes por un sitio web anticuado. Hagamos algo grande juntos.</p>
-            
-            <form id="contactForm" style="max-width: 700px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                    <input type="text" name="name" class="step-dot" style="width: 100%; border-radius: 12px; font-size: 1rem; padding: 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); box-shadow: none;" placeholder="Tu Nombre" required>
-                    <input type="email" name="email" class="step-dot" style="width: 100%; border-radius: 12px; font-size: 1rem; padding: 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); box-shadow: none;" placeholder="Tu Email" required>
+        <h2 class="section-title reveal">HABLEMOS DE TU PROYECTO</h2>
+        <div class="contact-grid">
+            <div class="reveal">
+                <p style="font-size: 1.5rem; margin-bottom: 3rem;">Conversemos y llevemos tu negocio al siguiente nivel digital.</p>
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <a href="https://wa.me/573114771700" target="_blank" class="glass-card" style="text-decoration: none; padding: 2rem; display: flex; align-items: center; gap: 2rem;">
+                        <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: #25d366;"></i>
+                        <div>
+                            <div style="font-weight: 800; color: white;">WhatsApp</div>
+                            <div style="color: var(--text-dim);">311 477 1700</div>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/byds.dev" target="_blank" class="glass-card" style="text-decoration: none; padding: 2rem; display: flex; align-items: center; gap: 2rem;">
+                        <i class="fab fa-instagram" style="font-size: 2.5rem; color: #e1306c;"></i>
+                        <div>
+                            <div style="font-weight: 800; color: white;">Instagram</div>
+                            <div style="color: var(--text-dim);">@byds.dev</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/BrayanYesid" target="_blank" class="glass-card" style="text-decoration: none; padding: 2rem; display: flex; align-items: center; gap: 2rem;">
+                        <i class="fab fa-github" style="font-size: 2.5rem; color: white;"></i>
+                        <div>
+                            <div style="font-weight: 800; color: white;">GitHub</div>
+                            <div style="color: var(--text-dim);">BrayanYesid</div>
+                        </div>
+                    </a>
                 </div>
-                <textarea name="message" class="step-dot" style="width: 100%; border-radius: 12px; font-size: 1rem; padding: 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); box-shadow: none; min-height: 150px;" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
-                <button type="submit" class="btn-main" style="width: 100%; margin-top: 2rem;">Enviar Mensaje a BYDS.DEV</button>
-            </form>
-            
-            <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;">
-                <a href="mailto:byds.dev@gmail.com" style="color: white; text-decoration: none; font-weight: 700;"><i class="fas fa-envelope" style="color: var(--primary); margin-right: 1rem;"></i> byds.dev@gmail.com</a>
-                <a href="tel:+573114771700" style="color: white; text-decoration: none; font-weight: 700;"><i class="fas fa-phone" style="color: var(--primary); margin-right: 1rem;"></i> +57 311 477 1700</a>
+            </div>
+            <div class="glass-card reveal">
+                <form id="contactForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <input type="text" name="name" placeholder="NOMBRE" style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); padding: 1.2rem; color: white;" required>
+                        <input type="email" name="email" placeholder="EMAIL" style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); padding: 1.2rem; color: white;" required>
+                    </div>
+                    <textarea name="message" rows="6" placeholder="CUÉNTANOS SOBRE TU PROYECTO..." style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); padding: 1.2rem; color: white; margin-bottom: 2rem;" required></textarea>
+                    <button type="submit" class="btn-futuristic primary" style="width: 100%; margin: 0;">ENVIAR PROPUESTA</button>
+                </form>
             </div>
         </div>
     </div>
 </section>
 
 <script>
+    // Rotating Headlines
+    const headlines = [
+        "TU NEGOCIO NECESITA PRESENCIA DIGITAL",
+        "IMPULSA TU NEGOCIO AL FUTURO",
+        "TECNOLOGÍA QUE TRANSFORMA NEGOCIOS",
+        "SOLUCIONES DIGITALES PARA EMPRESAS MODERNAS"
+    ];
+    let currentIdx = 0;
+    const heroTitle = document.getElementById('heroTitle');
+
+    setInterval(() => {
+        heroTitle.style.opacity = 0;
+        setTimeout(() => {
+            currentIdx = (currentIdx + 1) % headlines.length;
+            heroTitle.innerText = headlines[currentIdx];
+            heroTitle.style.opacity = 1;
+        }, 500);
+    }, 4000);
+
+    // Form logic
     document.getElementById('contactForm').onsubmit = function(e) {
         e.preventDefault();
         const formData = new FormData(this);
@@ -123,4 +228,9 @@
         .then(data => { alert(data.message); this.reset(); });
     };
 </script>
+
+<style>
+    #heroTitle { transition: opacity 0.5s ease-in-out; }
+    input:focus, textarea:focus { outline: 1px solid var(--neon-blue); }
+</style>
 {% endblock %}
