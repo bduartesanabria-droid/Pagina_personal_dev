@@ -15,7 +15,10 @@
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">BYDS<span>.DEV</span></a>
-            <ul class="nav-links">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quienes-somos">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -44,6 +47,25 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuBtn.onclick = () => {
+            navLinks.classList.toggle('active');
+            menuBtn.querySelector('i').classList.toggle('fa-bars');
+            menuBtn.querySelector('i').classList.toggle('fa-times');
+        };
+
+        // Close menu on click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                navLinks.classList.remove('active');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+            };
+        });
+
         // Mouse Glow
         const glow = document.getElementById('mouseGlow');
         document.addEventListener('mousemove', (e) => {
