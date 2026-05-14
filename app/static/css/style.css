@@ -16,10 +16,13 @@
     padding: 0;
     box-sizing: border-box;
     cursor: default;
+    max-width: 100%;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -28,6 +31,9 @@ body {
     font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
     line-height: 1.6;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
 }
 
 /* Background & Global Effects */
@@ -35,10 +41,11 @@ canvas#particles {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
     pointer-events: none;
+    max-width: 100vw;
 }
 
 .mouse-glow {
