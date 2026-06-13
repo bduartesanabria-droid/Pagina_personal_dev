@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYDS.DEV | Futuristic Technology Brand</title>
     <meta name="description" content="Diseño y desarrollo web futurista para empresas y startups que buscan innovar.">
+    <meta property="og:title" content="BYDS.DEV | Desarrollo Web Futurista">
+    <meta property="og:description" content="Diseñamos soluciones web modernas e innovadoras para empresas, emprendimientos y negocios que buscan destacar en el mundo digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://byds.dev">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BYDS.DEV | Desarrollo Web Futurista">
+    <meta name="twitter:description" content="Diseñamos soluciones web modernas e innovadoras para empresas y emprendimientos.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a0a0a'/><text x='50' y='74' font-family='Arial Black,sans-serif' font-size='58' font-weight='900' fill='%2300d2ff' text-anchor='middle'>B</text></svg>">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        #scrollProgress { position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#00d2ff,#ff7b00,#a855f7);z-index:10000;transition:width 0.08s linear;pointer-events:none; }
+        .whatsapp-float { position:fixed;bottom:2rem;right:2rem;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.75rem;color:white;z-index:9998;text-decoration:none;animation:wa-pulse 2.5s ease-in-out infinite;transition:transform 0.3s ease; }
+        .whatsapp-float:hover { transform:scale(1.12); }
+        .whatsapp-float:hover .wa-tip { opacity:1;transform:translateX(0); }
+        .wa-tip { position:absolute;right:70px;background:rgba(10,10,10,0.92);border:1px solid rgba(37,211,102,0.35);color:white;padding:8px 16px;border-radius:8px;font-size:0.82rem;font-weight:700;white-space:nowrap;opacity:0;transform:translateX(10px);transition:all 0.3s ease;pointer-events:none;font-family:'Outfit',sans-serif;letter-spacing:1px; }
+        @keyframes wa-pulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4),0 0 0 0 rgba(37,211,102,0.25)} 60%{box-shadow:0 6px 30px rgba(37,211,102,0.7),0 0 0 14px rgba(37,211,102,0)} }
+    </style>
 </head>
 <body>
+    <div id="scrollProgress"></div>
     <canvas id="particles"></canvas>
     <div class="mouse-glow" id="mouseGlow"></div>
 
@@ -23,6 +40,7 @@
                 <li><a href="#quienes-somos">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#portafolio">Proyectos</a></li>
+                <li><a href="#precios">Precios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -31,6 +49,11 @@
     <main>
         {% block content %}{% endblock %}
     </main>
+
+    <a href="https://wa.me/573114771700" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tip">¡Hablemos!</span>
+    </a>
 
     <footer>
         <div class="container">
@@ -47,6 +70,13 @@
     </footer>
 
     <script>
+        // Scroll progress bar
+        const scrollProg = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProg.style.width = pct + '%';
+        }, { passive: true });
+
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
