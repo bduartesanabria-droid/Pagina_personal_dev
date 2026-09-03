@@ -1,14 +1,13 @@
-version: '3.8'
-
 services:
   web:
-    build: .
+    build:
+      context: .
     ports:
       - "5001:5001"
     environment:
-      - FLASK_ENV=production
-      - SECRET_KEY=${SECRET_KEY:?Define SECRET_KEY in .env}
-      - SMTP_EMAIL=${SMTP_EMAIL:?Define SMTP_EMAIL in .env}
-      - SMTP_PASSWORD=${SMTP_PASSWORD:?Define SMTP_PASSWORD in .env}
-      - DEST_EMAIL=${DEST_EMAIL:?Define DEST_EMAIL in .env}
+      FLASK_ENV: "production"
+      SECRET_KEY: "${SECRET_KEY}"
+      SMTP_EMAIL: "${SMTP_EMAIL}"
+      SMTP_PASSWORD: "${SMTP_PASSWORD}"
+      DEST_EMAIL: "${DEST_EMAIL}"
     restart: always
