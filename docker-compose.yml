@@ -2,12 +2,13 @@ services:
   web:
     build:
       context: .
-    ports:
-      - "5001:5001"
+      dockerfile: Dockerfile
+    expose:
+      - "5001"
     environment:
       FLASK_ENV: "production"
       SECRET_KEY: "${SECRET_KEY}"
       SMTP_EMAIL: "${SMTP_EMAIL}"
       SMTP_PASSWORD: "${SMTP_PASSWORD}"
       DEST_EMAIL: "${DEST_EMAIL}"
-    restart: always
+    restart: unless-stopped
