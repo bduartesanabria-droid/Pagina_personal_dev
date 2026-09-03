@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BYDS.DEV | Futuristic Technology Brand</title>
+    <title>BYDS.DEV | Estudio digital</title>
     <meta name="description" content="Diseño y desarrollo web futurista para empresas y startups que buscan innovar.">
     <meta property="og:title" content="BYDS.DEV | Desarrollo Web Futurista">
     <meta property="og:description" content="Diseñamos soluciones web modernas e innovadoras para empresas, emprendimientos y negocios que buscan destacar en el mundo digital.">
@@ -32,14 +32,14 @@
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">BYDS<span>.DEV</span></a>
-            <button class="menu-btn" id="menuBtn">
+            <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quienes-somos">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#portafolio">Proyectos</a></li>
+                <li><a href="#estilos">Estilos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -49,7 +49,7 @@
         {% block content %}{% endblock %}
     </main>
 
-    <a href="https://wa.me/573114771700" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <a href="https://wa.me/573114771700" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span class="wa-tip">¡Hablemos!</span>
     </a>
@@ -59,9 +59,9 @@
             <div class="logo footer-logo">BYDS<span>.DEV</span></div>
             <p style="color: var(--neon-blue); letter-spacing: 5px; font-weight: 800; margin-bottom: 2rem;">IMPULSANDO HACIA EL FUTURO</p>
             <div style="display: flex; justify-content: center; gap: 3rem; margin-bottom: 3rem;">
-                <a href="https://github.com/bduartesanabria-droid" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/byds.dev" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/573114771700" target="_blank" style="color: white; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/bduartesanabria-droid" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/byds.dev" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/573114771700" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:byds.dev@gmail.com" style="color: white; font-size: 1.5rem;"><i class="fas fa-envelope"></i></a>
             </div>
             <p style="color: var(--text-dim); font-size: 0.8rem; opacity: 0.5;">&copy; 2026 BYDS.DEV. Digital Excellence.</p>
@@ -95,6 +95,7 @@
         
         menuBtn.onclick = () => {
             navLinks.classList.toggle('active');
+            menuBtn.setAttribute('aria-expanded', navLinks.classList.contains('active'));
             menuBtn.querySelector('i').classList.toggle('fa-bars');
             menuBtn.querySelector('i').classList.toggle('fa-times');
         };
@@ -103,6 +104,7 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.onclick = () => {
                 navLinks.classList.remove('active');
+                menuBtn.setAttribute('aria-expanded', 'false');
                 menuBtn.querySelector('i').classList.add('fa-bars');
                 menuBtn.querySelector('i').classList.remove('fa-times');
             };

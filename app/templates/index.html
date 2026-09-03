@@ -11,11 +11,11 @@
     <div class="hero-corner hero-corner-bl"></div>
     <div class="hero-corner hero-corner-br"></div>
     <div class="container hero-content">
+        <p class="editorial-kicker">BYDS.DEV / ESTUDIO DIGITAL INDEPENDIENTE</p>
         <h1 id="heroTitle" class="neon-text-blue">TU NEGOCIO NECESITA PRESENCIA DIGITAL</h1>
-        <p class="reveal">Diseñamos soluciones web modernas, innovadoras y funcionales que ayudan a empresas, emprendimientos y negocios a crecer en el mundo digital.</p>
+        <p class="reveal hero-intro">Diseñamos soluciones web con carácter, claridad y propósito para empresas, emprendimientos y negocios que quieren crecer.</p>
         <div class="reveal hero-buttons" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-            <a href="#portafolio" class="btn-futuristic primary">Ver Proyectos</a>
-            <a href="#contacto" class="btn-futuristic">Trabajar con BYDS</a>
+            <a href="#contacto" class="btn-futuristic primary">Trabajar con BYDS</a>
         </div>
     </div>
 </section>
@@ -136,42 +136,6 @@
     </div>
 </section>
 
-<!-- Portfolio Section -->
-<section id="portafolio" class="section">
-    <div class="container">
-        <h2 class="section-title reveal">PROYECTOS DESTACADOS</h2>
-        <div class="grid-3">
-            <!-- Proyecto: Rossypollo -->
-            <div class="glass-card reveal" style="padding: 1rem; overflow: hidden; transition-delay: 0.2s;">
-                <div style="height: 250px; background: linear-gradient(135deg, #0d3b1e 0%, #1a5c32 50%, #0d3b1e 100%); border-radius: 8px; margin-bottom: 2rem; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <div style="position: absolute; inset: 0; border: 2px solid rgba(255,255,255,0.12); margin: 16px; border-radius: 4px;"></div>
-                    <div style="position: absolute; left: 50%; top: 16px; bottom: 16px; width: 1px; background: rgba(255,255,255,0.12);"></div>
-                    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%;"></div>
-                    <div style="position: relative; z-index: 2; text-align: center;">
-                        <div style="font-size: 3.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 20px rgba(255,215,0,0.5));">⚽</div>
-                        <div style="color: #FFD700; font-weight: 900; font-size: 0.85rem; letter-spacing: 3px;">MUNDIAL 2026</div>
-                        <div style="color: rgba(255,255,255,0.5); font-size: 0.7rem; letter-spacing: 2px; margin-top: 4px;">POLLA DEPORTIVA</div>
-                    </div>
-                    <div style="position: absolute; top: 12px; right: 12px; background: rgba(0,210,100,0.15); border: 1px solid rgba(0,210,100,0.5); color: #00d264; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; display: flex; align-items: center; gap: 6px;">
-                        <span class="live-dot"></span>LIVE
-                    </div>
-                </div>
-                <div style="padding: 1.5rem;">
-                    <h3>ROSSYPOLLO</h3>
-                    <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 1rem;">Sistema web para polla del Mundial 2026. Predicciones, rankings y gestión de grupos en tiempo real.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem;">
-                        <span class="proj-tag proj-tag-blue">Python</span>
-                        <span class="proj-tag proj-tag-blue">Flask</span>
-                        <span class="proj-tag proj-tag-orange">PostgreSQL</span>
-                        <span class="proj-tag proj-tag-orange">Docker</span>
-                    </div>
-                    <a href="https://rossypollo.proyecto.sbs" target="_blank" class="neon-text-blue" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; font-weight: 800;">LIVE PREVIEW <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Testimonials Section -->
 <section id="testimonios" class="section" style="background: rgba(255,255,255,0.01);">
     <div class="container">
@@ -202,6 +166,72 @@
             <div class="tech-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
             <div class="tech-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
             <div class="tech-item"><i class="fab fa-github"></i><p>GitHub</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Visual Styles Section -->
+<section id="estilos" class="section styles-section">
+    <div class="container">
+        <p class="editorial-kicker">CATÁLOGO VISUAL / 2026</p>
+        <h2 class="section-title reveal">CADA IDEA TIENE<br>SU PROPIO LENGUAJE</h2>
+        <p class="styles-lead reveal">No trabajamos con una sola plantilla. Elegimos la dirección visual que mejor cuenta la historia de cada marca y la convertimos en una experiencia digital.</p>
+        <div class="styles-grid">
+            {% set design_styles = [
+                ('minimalism', 'Minimalismo', 'Minimalism'),
+                ('glassmorphism', 'Glasmorfismo', 'Glassmorphism'),
+                ('brutalism', 'Brutalismo', 'Brutalism'),
+                ('neumorphism', 'Neomorfismo', 'Neumorphism'),
+                ('skeuomorphism', 'Skeuomorfismo', 'Skeuomorphism'),
+                ('material', 'Material Design', 'Material You'),
+                ('flat', 'Flat Design', 'Flat Design'),
+                ('fluent', 'Fluent Design', 'Fluent Design'),
+                ('cyberpunk', 'Cyberpunk', 'Neon systems'),
+                ('retro', 'Retro / Vintage', 'Analog mood'),
+                ('y2k', 'Y2K Aesthetic', 'Digital nostalgia'),
+                ('memphis', 'Memphis Design', 'Playful geometry'),
+                ('bento', 'Bento Grid', 'Apple style'),
+                ('editorial', 'Editorial / Magazine', 'Print-inspired'),
+                ('organic', 'Organic / Natural', 'Soft materials'),
+                ('scifi', 'Futurista', 'Sci-Fi HUD'),
+                ('saas', 'Dashboard / SaaS', 'Product interface'),
+                ('dark', 'Dark UI', 'Modo oscuro'),
+                ('aurora', 'Aurora / Gradient UI', 'Atmospheric color'),
+                ('motion', 'Motion / Interactive UI', 'Kinetic experience'),
+                ('liquid', 'Liquid UI', 'Fluid surfaces'),
+                ('clay', 'Claymorphism', 'Soft 3D'),
+                ('pixel', 'Pixel Art UI', '8-bit world'),
+                ('terminal', 'Terminal / Hacker UI', 'Code first'),
+                ('kinetic', 'Kinetic Typography', 'Type in motion'),
+                ('maximalism', 'Maximalismo', 'More is more'),
+                ('handdrawn', 'Hand-Drawn UI', 'Human touch'),
+                ('mono', 'Monochromatic UI', 'One color'),
+                ('isometric', '3D UI', 'Isométrico'),
+                ('generative', 'AI / Generative UI', 'Adaptive systems'),
+                ('liquidglass', 'Liquid Glass UI', 'Transparent depth'),
+                ('paper', 'Paper UI', 'Tactile layout'),
+                ('mesh', 'Gradient Mesh UI', 'Color fields'),
+                ('frosted', 'Frosted UI', 'Vidrio hielo'),
+                ('neobrutal', 'Neo-Brutalism', 'Bold contrast'),
+                ('scroll', 'Scroll-Based Design', 'Narrative scroll'),
+                ('micro', 'Microinteractions UI', 'Small details'),
+                ('dataviz', 'Data Visualization UI', 'Information design'),
+                ('voice', 'Voice UI', 'Conversational flow'),
+                ('adaptive', 'Adaptive UI', 'Context aware')
+            ] %}
+            {% for slug, title, subtitle in design_styles %}
+            <article class="style-card reveal">
+                <div class="style-preview style-{{ slug }}">
+                    <div class="preview-top"><span></span><span></span><span></span><b>{{ subtitle }}</b></div>
+                    <div class="preview-screen">
+                        <div class="preview-copy"><small>BYDS / 00{{ loop.index }}</small><strong>{{ title }}</strong><i></i></div>
+                        <div class="preview-shape"></div>
+                        <div class="preview-lines"><em></em><em></em><em></em></div>
+                    </div>
+                </div>
+                <div class="style-card-info"><span>{{ '%02d'|format(loop.index) }}</span><h3>{{ title }}</h3></div>
+            </article>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -245,12 +275,12 @@
                 </div>
             </div>
             <div class="glass-card reveal">
-                <form id="contactForm">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <input type="text" name="name" placeholder="NOMBRE" style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); padding: 1.2rem; color: white;" required>
-                        <input type="email" name="email" placeholder="EMAIL" style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); padding: 1.2rem; color: white;" required>
+                <form id="contactForm" action="{{ url_for('main.contact') }}" method="post">
+                    <div class="form-fields">
+                        <div><label for="contact-name">Nombre</label><input id="contact-name" type="text" name="name" placeholder="NOMBRE" autocomplete="name" maxlength="120" required></div>
+                        <div><label for="contact-email">Email</label><input id="contact-email" type="email" name="email" placeholder="EMAIL" autocomplete="email" maxlength="254" required></div>
                     </div>
-                    <textarea name="message" rows="6" placeholder="CUÉNTANOS SOBRE TU PROYECTO..." style="width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border); padding: 1.2rem; color: white; margin-bottom: 2rem;" required></textarea>
+                    <label for="contact-message">Mensaje</label><textarea id="contact-message" name="message" rows="6" placeholder="CUÉNTANOS SOBRE TU PROYECTO..." maxlength="5000" required></textarea>
                     <button type="submit" class="btn-futuristic primary" style="width: 100%; margin: 0;">ENVIAR PROPUESTA</button>
                 </form>
             </div>
@@ -383,15 +413,6 @@
 <style>
     #heroTitle { transition: opacity 0.5s ease-in-out; }
     input:focus, textarea:focus { outline: 1px solid var(--neon-blue); }
-
-    /* Project tags */
-    .proj-tag { padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px; }
-    .proj-tag-blue { background: rgba(0,210,255,0.1); border: 1px solid rgba(0,210,255,0.3); color: var(--neon-blue); }
-    .proj-tag-orange { background: rgba(255,123,0,0.1); border: 1px solid rgba(255,123,0,0.3); color: var(--neon-orange); }
-
-    /* Live badge */
-    @keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 0 rgba(0,210,100,0.5)} 70%{box-shadow:0 0 0 6px rgba(0,210,100,0)} }
-    .live-dot { display:inline-block;width:6px;height:6px;background:#00d264;border-radius:50%;animation:pulse-dot 1.5s ease-in-out infinite; }
 
     /* Process section */
     .process-grid { display:flex;align-items:flex-start;justify-content:center;gap:1rem;flex-wrap:wrap; }

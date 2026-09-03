@@ -7,5 +7,8 @@ services:
       - "5001:5001"
     environment:
       - FLASK_ENV=production
-      - SECRET_KEY=your-secret-key-here
+      - SECRET_KEY=${SECRET_KEY:?Define SECRET_KEY in .env}
+      - SMTP_EMAIL=${SMTP_EMAIL:-byds.dev@gmail.com}
+      - SMTP_PASSWORD=${SMTP_PASSWORD:?Define SMTP_PASSWORD in .env}
+      - DEST_EMAIL=${DEST_EMAIL:-byds.dev@gmail.com}
     restart: always
