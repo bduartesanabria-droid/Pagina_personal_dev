@@ -265,11 +265,11 @@
                             <div style="color: var(--text-dim);">bduartesanabria-droid</div>
                         </div>
                     </a>
-                    <a href="mailto:byds.dev@gmail.com" class="glass-card" style="text-decoration: none; padding: 2rem; display: flex; align-items: center; gap: 2rem;">
+                    <a href="mailto:{{ config.get('CONTACT_EMAIL', '') }}" class="glass-card" style="text-decoration: none; padding: 2rem; display: flex; align-items: center; gap: 2rem;">
                         <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--neon-orange);"></i>
                         <div>
                             <div style="font-weight: 800; color: white;">Email</div>
-                            <div style="color: var(--text-dim);">byds.dev@gmail.com</div>
+                            <div style="color: var(--text-dim);">{{ config.get('CONTACT_EMAIL', '') }}</div>
                         </div>
                     </a>
                 </div>
@@ -336,7 +336,8 @@
     }, 4000);
 
     // Form logic with premium notification
-    const form = document.getElementById('contactForm');
+     const contactEmail = {{ config.get('CONTACT_EMAIL', '')|tojson }};
+     const form = document.getElementById('contactForm');
     const submitBtn = form.querySelector('button[type="submit"]');
 
     function showToast(message, isSuccess) {
@@ -401,7 +402,7 @@
             if (isSuccess) this.reset();  // Solo vaciamos si fue exitoso
         })
         .catch(() => {
-            showToast('Error de conexión. Escríbenos a byds.dev@gmail.com', false);
+             showToast(`Error de conexión. Escríbenos a ${contactEmail}`, false);
         })
         .finally(() => {
             submitBtn.disabled = false;

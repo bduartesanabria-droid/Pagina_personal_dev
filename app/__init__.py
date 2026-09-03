@@ -6,7 +6,8 @@ load_dotenv()  # Carga el archivo .env
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'change-this-secret-key')
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+    app.config['CONTACT_EMAIL'] = os.environ.get('DEST_EMAIL', '')
 
     from app.routes.main import main_bp
     app.register_blueprint(main_bp)

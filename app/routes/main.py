@@ -9,9 +9,9 @@ import os
 main_bp = Blueprint('main', __name__)
 
 # ─── Configura aquí tus credenciales ───────────────────────────────────────────
-SMTP_EMAIL   = os.environ.get('SMTP_EMAIL',    'byds.dev@gmail.com')
-SMTP_PASSWORD= os.environ.get('SMTP_PASSWORD', '')   # <-- Pon tu contraseña de app de Google
-DEST_EMAIL   = os.environ.get('DEST_EMAIL', SMTP_EMAIL)
+SMTP_EMAIL   = os.environ.get('SMTP_EMAIL')
+SMTP_PASSWORD= os.environ.get('SMTP_PASSWORD')
+DEST_EMAIL   = os.environ.get('DEST_EMAIL')
 EMAIL_PATTERN = re.compile(r'^[^\s@]+@[^\s@]+\.[^\s@]+$')
 # ────────────────────────────────────────────────────────────────────────────────
 
@@ -35,8 +35,8 @@ def contact():
     if not EMAIL_PATTERN.fullmatch(email) or any(c in value for value in (name, email) for c in ('\n', '\r')):
         return jsonify({"status": "error", "message": "Introduce un correo electrónico válido."}), 400
 
-    if not SMTP_PASSWORD or SMTP_PASSWORD == 'tu_contrasena_de_app_aqui':
-        return jsonify({"status": "error", "message": "El servicio de correo no está configurado. Escríbenos directamente a byds.dev@gmail.com"}), 503
+    if not all([SMTP_EMAIL, SMTP_PASSWORD, DEST_EMAIL]):
+        return jsonify({"status": "error", "message": "El servicio de correo no está configurado."}), 503
 
     safe_name = html.escape(name)
     safe_email = html.escape(email, quote=True)
@@ -81,4 +81,4 @@ def contact():
     except Exception as e:
         print(f"[SMTP ERROR] {e}")
         return jsonify({"status": "error",
-                        "message": "Hubo un problema al enviar el mensaje. Escríbenos directamente a byds.dev@gmail.com"}), 502
+                        "message": "Hubo un problema al enviar el mensaje. Inténtalo más tarde."}), 502

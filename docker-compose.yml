@@ -8,7 +8,7 @@ services:
     environment:
       - FLASK_ENV=production
       - SECRET_KEY=${SECRET_KEY:?Define SECRET_KEY in .env}
-      - SMTP_EMAIL=${SMTP_EMAIL:-byds.dev@gmail.com}
+      - SMTP_EMAIL=${SMTP_EMAIL:?Define SMTP_EMAIL in .env}
       - SMTP_PASSWORD=${SMTP_PASSWORD:?Define SMTP_PASSWORD in .env}
-      - DEST_EMAIL=${DEST_EMAIL:-byds.dev@gmail.com}
+      - DEST_EMAIL=${DEST_EMAIL:?Define DEST_EMAIL in .env}
     restart: always
