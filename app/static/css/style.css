@@ -809,6 +809,16 @@ footer p { color: #c8c3b9 !important; }
 
 /* Design direction catalogue */
 .styles-section { overflow: hidden; }
+.services-intro { max-width: 650px; margin: -2rem 0 4rem; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; }
+.service-groups { display: flex; flex-direction: column; gap: 5rem; }
+.service-group-heading { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.8rem; }
+.service-group-heading span { color: var(--accent); font: 700 0.7rem 'DM Sans', sans-serif; letter-spacing: 1px; }
+.service-group-heading h3 { color: var(--ink); font: 600 2rem 'Playfair Display', serif; letter-spacing: -0.5px; text-transform: none; }
+.service-group .grid-4 { gap: 1rem; }
+.service-group .glass-card { padding: 1.7rem; }
+.service-group .glass-card h3 { font-size: 1.25rem; }
+.service-group .glass-card p { margin-top: 0.7rem; font-size: 0.88rem; line-height: 1.65; }
+.service-group .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
 .styles-lead { max-width: 620px; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: -2rem 0 4rem; }
 .styles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
 .style-card { min-width: 0; }
